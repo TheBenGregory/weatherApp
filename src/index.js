@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { WeatherApp } from './WeatherApp.js';
 import reportWebVitals from './reportWebVitals';
+import { HomePage } from './HomePage/HomePage';
+
+
+// import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HomePage />
   </React.StrictMode>,
   document.getElementById('root')
 );
