@@ -4,6 +4,7 @@ import { ApplicationViews } from "./ApplicationViews";
 import { HomePage } from "./HomePage/HomePage";
 import './WeatherApp.css';
 
+
 export const WeatherApp = () => {
 
   <>

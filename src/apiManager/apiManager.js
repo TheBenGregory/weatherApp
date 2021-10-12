@@ -1,4 +1,10 @@
+const api = {
+    key: "62b1c33cd8c149419ca233755211110",
+    base: "http://api.weatherapi.com/v1"
+  }
+
 export const getWeather = () => {
-    return fetch("http://api.weatherapi.com/v1/current.json?key=548b6397e79c4a8e8ae223753212809&q=37129&aqi=no")
+    return fetch("http://pro.openweathermap.org/data/2.5/weather?q=London,uk&APPID=e1d40a2013e49267140f997eab3df080")
         .then(res => res.json())
 }
+
