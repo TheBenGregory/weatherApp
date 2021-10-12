@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { api } from "../apiManager/apiManager";
-
+import "./HomePage.css"
+import "../index.css"
 
 
 export const HomePage = () => {
@@ -39,12 +40,10 @@ export const HomePage = () => {
         let date = d.getDate();
         let month = months[d.getMonth()];
         let year = d.getFullYear()
+        let yearAbr = String(year).slice(2,4)
+        return `${day} ${month} ${date} '${yearAbr} `
     }
 
-    const dateB = () => {
-        let date = String(new window.Date())
-        date = date.slice(3,15)
-    }
 
     console.log(weather)
 
@@ -71,7 +70,7 @@ export const HomePage = () => {
                         <div>
                             <div className="locationBox">
                                 <div className="location">{weather.name}, {weather.sys.country}</div>
-                                <div className="date">{dateB}</div>
+                                <div className="date">{dateBuilder(new Date())}</div>
                             </div>
                             <div className="weatherBox">
                                 <div className="temp">
