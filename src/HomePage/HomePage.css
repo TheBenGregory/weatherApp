@@ -1,27 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Cabin Sketch"
+  }
+  
+  main {
+    min-height: 100vh;
+    padding: 25px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.2), rgba(0,0,0, 0.40) );
+  }
+  
+  .wx {
+    background-color: rgb(141, 172, 230);
+    background-image: url("../images/warmbg.png");
+    background-size: cover;
+    background-position: bottom;
+    transition: 1s ease-in-out;
+  
+  }
+  
+  .wx.cold {
+    background-color: rgb(141, 172, 230);
+    background-image: url("../images/coldbg.png"); 
+    background-size: cover;
+    background-position: bottom;
+    transition: 1s ease-in-out;
+  }
+
+  .wx.rain {
+    background-color: rgb(141, 172, 230);
+    background-image: url("../images/coldbg.png"); 
+    background-size: cover;
+    background-position: bottom;
+    transition: 1s ease-in-out;
+  }
+
+  .wx.clouds {
+    background-color: rgb(141, 172, 230);
+    background-image: url("../images/cloudsbg.png"); 
+    background-size: cover;
+    background-position: bottom;
+    transition: 1s ease-in-out;
+  }
+  
 
   .searchBox{
       width: 100%;
-      margin: 0 0 75px
+      margin: 0 0 30px
   }
 
   .searchBox .searchBar {
       display: block;
       width: 100%;
-      padding: 15px;
-
-    
+      padding: 20px;
       appearance: none;
       background: none;
       border: none;
       outline: none;
       
-      border-radius: 0% 0% 10% 10%;
+      border-radius: 10px;
       margin-top: -5px;
-
       background-color: aliceblue;
 
       box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
 
   }
+.locationBox{
+  text-align: center;
+  font-size: 23px;
+  color: aquamarine;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+}
+.location{
+  padding: 5%;
+  
+}
+
+.weatherBox {
+    text-align: center;
+    padding-top: 20%;
+  }
+.temp{
+  position: relative;
+  margin: 20px auto;
+  font-size: 60px;
+  color: aquamarine;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  border-radius: 15px;
+  background-color: rgba(172, 166, 255, 0.7);
+  transition-timing-function: ease-in;
+  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+}
+.weather{
+  text-align: center;
+  font-size: 23px;
+  color: aquamarine;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+}
