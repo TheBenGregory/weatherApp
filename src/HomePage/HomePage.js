@@ -46,21 +46,23 @@ export const HomePage = () => {
 
 
     console.log(weather)
-
+    
                 return (
                     <>
                     <div className={
                     (typeof weather.main != "undefined") 
-                        ? ((weather.main.temp > 50) 
-                             ? "main_warm" 
-                               : 'main') 
-                                    : 'main'}>
+                        ? ((weather.main.temp < 50) 
+                             ? "wx cold" 
+                               : (typeof weather.weather[0].main === "Clouds") 
+                                ? 'clouds' 
+                                    : "wx") 
+                                        : 'wx'}>
                         <main>
                             <div className="searchBox">
                                 <input
                                 type="text"
                                 className="searchBar"
-                                placeHolder="search"
+                                placeHolder="Search..."
                                 onChange={e => setQuery(e.target.value)}
                                 value={query}
                                 onKeyPress={search}
